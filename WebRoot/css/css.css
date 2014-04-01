@@ -1,0 +1,41 @@
+body{ font-size:14px; margin:0; padding:0; color:#666; line-height:18px
+}
+
+
+a{ color:#666; text-decoration:none;}
+a:hover{ color:#f90; text-decoration:none;}
+.func{ color:white; font-size:12px}
+.func a{ color:white; text-decoration:none; font-size:12px}
+.func a:hover{ color:#FFCC00}
+#nav{ background:url("nav_bg.jpg"/*tpa=http://www.cceca.cn/images/nav_bg.jpg*/) repeat-x ; height:42px;}
+#news{ width:512px; margin:10px auto 0 auto; height:150px; background: url("dot2.jpg"/*tpa=http://www.cceca.cn/images/dot2.jpg*/) repeat-x bottom;}
+#news .pic{ background:url("picbg.jpg"/*tpa=http://www.cceca.cn/images/picbg.jpg*/) no-repeat center; width:167px; height:117px; float:left;}
+.img1{ margin:12px 12px; display:block}
+
+#news h1{ font-size:14px; color:#2685E3; line-height:20px; text-decoration:none; font-weight:normal; float:right; width:320px;
+margin-right:5px; margin-bottom:6px;}
+#news h1.nr a{  font-size:14px;color:#666666; line-height:25px; text-decoration:underline; margin-top:10px !important; text-align:left}
+#news h1.nr a:hover{ color:#f90;}
+#news h1.nr{font-size:14px; color:#666666; line-height:25px; text-decoration:underline; margin-top:15px !important; text-align:left}
+#list td{ background: url("dot3.jpg"/*tpa=http://www.cceca.cn/images/dot3.jpg*/) repeat-x bottom }
+#list{ line-height:30px; font-size:12px; margin-top:15px}
+#list1{ line-height:20px; color:#167BD5; font-size:12px}
+#list1 a{color:#167BD5; text-decoration:none}
+#list1 td{ background:url("dot4.jpg"/*tpa=http://www.cceca.cn/images/dot4.jpg*/) repeat-x bottom;  }
+#footer{ background:url("foot_bg.jpg"/*tpa=http://www.cceca.cn/images/foot_bg.jpg*/) repeat-x top; height:80px; color:white; line-height:22px; font-size:12px}
+/*二级页面css开始*/
+#xhjs{margin:0 auto; width:210px !important; width:212px;background:white; height:auto; border-left:1px solid #99caf5; border-right:1px solid #99caf5;}
+#xhjs ul{width:180px;  list-style:none; margin-left:15px;!important margin-left:0; padding:0; clear:both}
+#xhjs ul li{ line-height:30px; padding-left:20px; background:url("mark5.jpg"/*tpa=http://www.cceca.cn/images/mark5.jpg*/) 
+no-repeat left; border-bottom:1px dashed #0079F2; }
+#xhjs ul li a{ color:#004890; font-size:14px; text-decoration:none;}
+#newlist td{ background:url("dot3.jpg"/*tpa=http://www.cceca.cn/images/dot3.jpg*/) repeat-x bottom; line-height:25px}
+#newlist a{ font-size:14px; line-height:30px; text-decoration:none; color:#666;}
+#newlist a:hover{ color: #06c; text-decoration:none}
+h1{ font-size:16px; font-weight:bold; color:#0066CC; line-height:30px; text-align:center; margin-top:0}
+h2{ color:#666666; font-size:14px; font-weight:bold}
+.content{ font-size:14px; line-height:25px}
+.bluefont{ color:#167bd5;}
+.bluefont2{color:#167bd5; font-size:14px }
+.content{ font-size:14px}
+.input1{ border:1px solid #CCCCCC; line-height:25px; color:#167bd5; background:white}

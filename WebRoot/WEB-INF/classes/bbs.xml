@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<package name="bbs" namespace="/web" extends="struts-default">
+         <interceptors>
+				<interceptor name="logger" class="com.ceb.inceptor.AuthorityInterceptor" />
+				<interceptor-stack name="myStack">
+					<interceptor-ref name="logger" />
+				</interceptor-stack>
+			</interceptors>
+			
+		<action name="bbsList" class="com.ceb.action.BbsListAction">
+            
+			<result name="listAll" type="dispatcher">
+				/bbs_index.jsp
+			
+			</result>
+			<result name="listDetail" type="dispatcher">
+				/bbs_detail.jsp
+			
+			</result>
+			<result name="input">/member_login.jsp</result>
+		</action>
+
+		<action name="bbsReply" class="com.ceb.action.BbsReplyAction">
+
+			
+          
+             
+			<result name="replySuccess" type="dispatcher">/bbs_index.jsp</result>
+			<result name="error" type="dispatcher">/error.jsp</result>
+			<result name="input">/member_login.jsp</result>
+			<!--
+				<result name="success" type="chain"> <param
+				name="actionName">bbsList</param> <param
+				name="method">listAll</param> </result>
+			-->
+		</action>
+         
+         <action name="bbsGoPost" class="com.ceb.action.BbsPostAction">
+
+             <interceptor-ref name="myStack"/>
+			<result name="error" type="dispatcher">/error.jsp</result>
+			<result name="goPostSuccess" type="dispatcher">
+				/bbs_post.jsp
+			</result>
+			<result name="input">/member_login.jsp</result>
+		
+		</action>
+         
+		<action name="bbsPost" class="com.ceb.action.BbsPostAction">
+
+             
+			<result name="error" type="dispatcher">/error.jsp</result>
+			<result name="postSuccess" type="chain">
+				<param name="actionName">bbsList</param>
+				<param name="method">listAll</param>
+				<!--
+					/bbs/bbs_index.jsp
+				-->
+			</result>
+			<result name="input">/member_login.jsp</result>
+			<!--
+				<result name="gotoSuccess">/bbs_post.jsp</result>
+			-->
+		</action>
+
+
+	</package>
+</struts>

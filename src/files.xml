@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<package name="files" namespace="/web" extends="struts-default">
+		<action name="upload" class="com.ceb.action.FilesAction">
+			<param name="savePath">/files</param>
+			<result name="success">/upSuc.jsp</result>
+			<result name="input">/files_upload.jsp</result>
+			<!-- <interceptor-ref name="fileUpload">
+				<param name="allowedTypes">image/bmp,image/png,image/gif,image/jpeg,image/jpg,application/pdf,application/rar</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack" /> -->
+		</action>
+
+	</package>
+
+</struts>

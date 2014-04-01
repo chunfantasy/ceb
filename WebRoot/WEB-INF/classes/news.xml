@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<package name="news" namespace="/web" extends="struts-default">
+		<interceptors>
+			<interceptor name="logger" class="com.ceb.inceptor.AuthorityInterceptor" />
+			<interceptor-stack name="myStack">
+				<interceptor-ref name="logger" />
+			</interceptor-stack>
+		</interceptors>
+
+		<action name="NewsList" class="com.ceb.action.NewsAction">
+			<result name="success" type="dispatcher">
+				/news_index.jsp
+			
+			</result>
+			<result name="list" type="dispatcher">
+				/news_index.jsp
+			
+			</result>
+			<result name="listDetail" type="dispatcher">
+				/news_detail.jsp
+			
+			</result>
+		</action>
+		<action name="NewsPost" class="com.ceb.action.NewsAction">
+			<result name="postSuccess">/success.jsp</result>
+			<result name="error">/error.jsp</result>
+
+		</action>
+
+	</package>
+</struts>
